@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>VideoGames Store</title>
+    <!-- Incluir Bootstrap CSS desde una CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Enlaza los archivos CSS y JavaScript de Bootstrap en "categoria2.html" -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="juegos.css">
+
+
+</head>
+<body>
+     <!-- Barra de navegación -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">VideoGames Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juegos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productosDropdown">
+                        <a class="dropdown-item" href="productos.html">General</a>
+                        <a class="dropdown-item" href="categoria1.html">Aventuras</a>
+                        <a class="dropdown-item" href="categoria2.html">Peleas</a>
+                        <a class="dropdown-item" href="categoria3.html">RPG</a>
+                        <a class="dropdown-item" href="categoria4.html">Shooters</a>
+                        <a class="dropdown-item" href="categoria5.html">Simuladores</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <!-- Barra de búsqueda -->
+            <form class="form-inline ml-auto" id="search-form">
+                <input class="form-control mr-sm-2" type="search" id="search-input" placeholder="Buscar videojuego... " aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Agrega aquí el contenido de tu página web -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchForm = document.getElementById("search-form");
+            const searchInput = document.getElementById("search-input");
+
+            searchForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const searchTerm = searchInput.value.trim();
+
+                if (searchTerm !== "") {
+                    window.location.href = "resultados-de-busqueda.html?q=" + encodeURIComponent(searchTerm);
+                }
+            });
+        });
+    </script>
+
+    <div class="container">
+        <h1 class="my-4">Peleas: </h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagen_pelea1.jpg" class="card-img-top" alt="Juego 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego</h5>
+                        <p class="card-text">Descripción del juego. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card-text">Precio: $49.99</p>
+                        <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 1', 49.99)">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagen_pelea2.jpg" class="card-img-top" alt="Juego 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego</h5>
+                        <p class="card-text">Descripción del juego. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card-text">Precio: $49.99</p>
+                        <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 2', 39.99)">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagen_pelea3.jpg" class="card-img-top" alt="Juego 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego</h5>
+                        <p class="card-text">Descripción del juego. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card-text">Precio: $49.99</p>
+                        <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 3', 49.99)">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagen_pelea4.jpg" class="card-img-top" alt="Juego 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego</h5>
+                        <p class="card-text">Descripción del juego. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card-text">Precio: $49.99</p>
+                        <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 4', 49.99)">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagen_pelea5.jpg" class="card-img-top" alt="Juego 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego</h5>
+                        <p class="card-text">Descripción del juego. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card-text">Precio: $49.99</p>
+                        <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 5', 49.99)">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agregar más tarjetas de juegos aquí -->
+        </div>
+    </div>
+
+    <!-- Carrito de Compras -->
+    <div class="container mt-5 carro">
+        <h2>Carrito de Compras</h2>
+        <ul id="carrito-lista">
+            <!-- Elementos seleccionados se agregarán aquí -->
+        </ul>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button class="btn btn-success" onclick="realizarCompra()">Comprar</button>
+    </div>
+
+    <!-- Incluir Bootstrap JS y scripts personalizados al final del cuerpo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carrito = [];
+        let total = 0;
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const carritoLista = document.getElementById('carrito-lista');
+            const totalElemento = document.getElementById('total');
+            carritoLista.innerHTML = '';
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio.toFixed(2)}`;
+                carritoLista.appendChild(li);
+            });
+            totalElemento.textContent = total.toFixed(2);
+        }
+
+        function realizarCompra() {
+            // Aquí puedes agregar la lógica para procesar la compra
+            alert('Compra realizada. Total: $' + total.toFixed(2));
+            carrito.length = 0; // Vaciar el carrito
+            total = 0;
+            actualizarCarrito();
+        }
+    </script>
+
+        <!-- Botón para volver al archivo "index.html" -->
+        <button id="volverBtn">Volver a la página principal</button>
+
+        <!-- Script JavaScript para redirigir al usuario -->
+        <script>
+            document.getElementById("volverBtn").addEventListener("click", function () {
+                window.location.href = "index.html";
+            });
+        </script>
+
+<!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Contacto</h4>
+                <p > <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fes%2Fsearch%3Fq%3Ds%25C3%25ADmbolo%2Bde%2Btel%25C3%25A9fono&psig=AOvVaw3Cx4T6ELLarFxjAz5r3WxY&ust=1697635862813000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPjK4seY_YEDFQAAAAAdAAAAABAD" alt="" width="20px" height="20px">Correo electrónico: info@loustienda.com</p>
+                <p>Teléfono: +1234567890</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Ubicación</h4>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Código Postal: 12345</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

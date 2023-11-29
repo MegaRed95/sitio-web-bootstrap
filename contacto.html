@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Información de VideoGames Store</title>
+        <!-- Enlaza los archivos CSS y JavaScript de Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">VideoGames Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juegos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productosDropdown">
+                        <a class="dropdown-item" href="productos.html">General</a>
+                        <a class="dropdown-item" href="categoria1.html">Aventuras</a>
+                        <a class="dropdown-item" href="categoria2.html">Peleas</a>
+                        <a class="dropdown-item" href="categoria3.html">RPG</a>
+                        <a class="dropdown-item" href="categoria4.html">Shooters</a>
+                        <a class="dropdown-item" href="categoria5.html">Simuladores</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <!-- Barra de búsqueda -->
+            <form class="form-inline ml-auto" id="search-form">
+                <input class="form-control mr-sm-2" type="search" id="search-input" placeholder="Buscar videojuego... " aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Agrega aquí el contenido de tu página web -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchForm = document.getElementById("search-form");
+            const searchInput = document.getElementById("search-input");
+
+            searchForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const searchTerm = searchInput.value.trim();
+
+                if (searchTerm !== "") {
+                    window.location.href = "resultados-de-busqueda.html?q=" + encodeURIComponent(searchTerm);
+                }
+            });
+        });
+    </script>
+
+    <h1>Información de la Tienda de Videojuegos</h1>
+
+    <h2>Información de Contacto</h2>
+    <p>Para cualquier consulta, no dudes en ponerte en contacto con nosotros:</p>
+    <address>
+        <strong>Nombre de la Tienda:</strong> Tienda de Videojuegos ZXX <br>
+        <strong>Dirección:</strong> Calle Principal #123, Ciudad<br>
+        <strong>Teléfono:</strong> (123) 456-7890<br>
+        <strong>Email:</strong> info@tiendadejuegos.com<br>
+    </address>
+
+    <h2>Ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-75.123456!3d40.987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDE5JzA2LjkiTiA3NcKwMDYnNTcuOCJX!5e0!3m2!1sen!2sus!4v1561051069758!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+
+    <h2>Trabajadores</h2>
+    <ul>
+        <li><strong>Gerente:</strong> Nombre del Gerente</li>
+        <li><strong>Asistente de Tienda:</strong> Nombre del Asistente</li>
+        <li><strong>Vendedor 1:</strong> Nombre del Vendedor 1</li>
+        <li><strong>Vendedor 2:</strong> Nombre del Vendedor 2</li>
+    </ul>
+
+    <p>Para conocer más sobre nuestro equipo, ¡visítanos en la tienda!</p>
+
+    
+    <!-- Botón para volver al archivo "index.html" -->
+    <button id="volverBtn">Volver a la página principal</button>
+
+    <!-- Script JavaScript para redirigir al usuario -->
+    <script>
+        document.getElementById("volverBtn").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    </script>
+
+    <!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Contacto</h4>
+                <p>Correo electrónico: info@loustienda.com</p>
+                <p>Teléfono: +1234567890</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Ubicación</h4>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Código Postal: 12345</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

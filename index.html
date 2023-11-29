@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" type="text/css" href="juegos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>VideoGames Store</title>
+
+    <!-- Enlaza los archivos CSS y JavaScript de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">VideoGames Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juegos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productosDropdown">
+                        <a class="dropdown-item" href="productos.html">General</a>
+                        <a class="dropdown-item" href="categoria1.html">Aventuras</a>
+                        <a class="dropdown-item" href="categoria2.html">Peleas</a>
+                        <a class="dropdown-item" href="categoria3.html">RPG</a>
+                        <a class="dropdown-item" href="categoria4.html">Shooters</a>
+                        <a class="dropdown-item" href="categoria5.html">Simuladores</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <!-- Barra de búsqueda -->
+            <form class="form-inline ml-auto" id="search-form">
+                <input class="form-control mr-sm-2" type="search" id="search-input" placeholder="Buscar videojuego... " aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+<!-- Presentación escrita -->
+<header class="bg-dark text-white text-center py-5">
+    <h1>VideoGames Store</h1>
+    <p>Descubre las últimas actualizaciones del video-gaming en general.</p>
+    <a href="#miCarrusel" class="btn btn-primary btn-lg">Ver destacados: </a>
+</header>
+
+
+    <!-- Agrega aquí el contenido de tu página web -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchForm = document.getElementById("search-form");
+            const searchInput = document.getElementById("search-input");
+
+            searchForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const searchTerm = searchInput.value.trim();
+
+                if (searchTerm !== "") {
+                    window.location.href = "resultados-de-busqueda.html?q=" + encodeURIComponent(searchTerm);
+                }
+            });
+        });
+    </script>
+        
+
+
+
+
+<!-- Carrusel de imágenes -->
+<div id="miCarrusel" class="carousel slide" data-ride="carousel">
+    <!-- Indicadores -->
+    <ul class="carousel-indicators">
+      <li data-target="#miCarrusel" data-slide-to="0" class="active"></li>
+      <li data-target="#miCarrusel" data-slide-to="1"></li>
+      <li data-target="#miCarrusel" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- Imágenes del carrusel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+
+    <div class="carousel-inner" >
+
+      <div class="carousel-item active item" data-bs-interval="10000">
+        <img src="imagen1.jpg"  class="d-block w-100 d-img">
+        <div class="carousel-caption d-none d-md-block">
+            <h3 class="letra2">¿Qué son los videojuegos resumen?</h3>
+            <p class="letra2">Los videojuegos son programas de ordenador que conectados a una pantalla o televisión, integran un sistema de vídeo y audio. 
+                A través de ese sistema el usuario puede vivir experiencias disfrutando de actividades que en la realidad no practicaría.</p>
+            <p class="letra2">Pueden considerarse parte del medio artistico.</p>
+        </div>
+      </div>
+      <div class="carousel-item item" data-bs-interval="10000">
+        <img src="imagen2.jpg"  class="d-block w-100 d-img">
+        <div class="carousel-caption d-none d-md-block">
+            <h3 class="letra2">¿Como pueden influir los videojuegos en la vida real?</h3>
+            <p class="letra2">En algunos estudios se asocia el exceso de juego con efectos sociales y psicológicos negativos, como el aislamiento y la agresividad; 
+                mientras que en otros se asocia con el aprendizaje y reaprendizaje motor y la tenacidad para enfrentar situaciones de la vida real.</p>
+            <p class="letra2">Todo depende de como lo veamos cada uno.</p>
+        </div>
+      </div>
+      <div class="carousel-item item" data-bs-interval="10000">
+        <img src="imagen3.jpg"  class="d-block w-100 d-img">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="letra2">¿Cómo se llama el juego más famoso del mundo?</h3>
+          <p class="letra2">Este seria: Minecraft. Con más de 350 millones de copias vendidas desde su lanzamiento en 2011, Minecraft es el videojuego más vendido de la historia.
+             Un lugar en el que se ha asentado. No obstante, justo detrás de el hay un juego que, diez años después de su lanzamiento, sigue batiendo récords de ventas.</p>
+          <p class="letra2">Lo que logro este juego hasta dia de hoy, no deja de ser impresionante.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Controles -->
+    <a class="carousel-control-prev" href="#miCarrusel" data-slide="prev">
+      <span class="carousel-control-prev-icon" data-bs-interval="10000"></span>
+    </a>
+    <a class="carousel-control-next" href="#miCarrusel" data-slide="next">
+      <span class="carousel-control-next-icon" data-bs-interval="10000"></span>
+    </a>
+</div>
+</div>
+
+<!-- Contenido de la tienda -->
+<header class="bg-white text-dark text-center py-5">
+    <h1>Productos de Videojuegos:</h1>
+    <p>Juega más, vive más; siendo real</p>
+</header>
+<div class="container con">
+    <h1 class="my-4">En General: </h1>
+    <div class="row">
+        <div class="col-md-4">
+
+
+            <div class="carta card align-items-center" style="width: 20rem;">
+                <img src="imagen_juego1.jpg" class="card-img-top carta-imagen" alt="Juego 1">
+                <div class="card-body">
+                    <h5 class="card-title">Dishonored</h5>
+                    <p class="card-text">Descripcion del juego. Dishonored (en español Deshonrado) es un videojuego de acción-aventura y sigilo en primera persona desarrollado por Arkane Studios y publicado por Bethesda Softworks. 
+                        Fue lanzado a nivel mundial entre el 9 y el 12 de octubre de 2012 para Microsoft Windows, PlayStation 3, y Xbox 360.</p>
+                    <p class="card-text">Precio: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 1', 49.99)">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="carta card align-items-center" style="width: 20rem;">
+                <img src="imagen_juego2.jpg" class="card-img-top carta-imagen responsive" alt="Juego 2">
+                <div class="card-body">
+                    <h5 class="card-title">Grand Theft Auto: V (Five)</h5>
+                    <p class="card-text">Descripción del juego. Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto en tercera persona desarrollado por el estudio escocés Rockstar North y distribuido por Rockstar Games. 
+                        Este título revolucionario hizo su debut el 17 de septiembre de 2013 en las consolas Xbox 360 y PlayStation 3.</p>
+                    <p class="card-text">Precio: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 2', 49.99)">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="carta card align-items-center" style="width: 20rem;">
+                <img src="imagen_juego3.jpg" class="card-img-top carta-imagen" alt="Juego 3">
+                <div class="card-body">
+                    <h5 class="card-title">Destiny</h5>
+                    <p class="card-text">Descripción del juego. Destiny es un videojuego de disparos en primera persona, en forma de multijugador masivo en línea en un mundo abierto de ficción especulativa. Fue desarrollado por Bungie y publicado por Activision como parte de un contrato de producción de diez años.
+                        Se lanzó a nivel mundial el 9 de septiembre de 2014​ para PlayStation 3, PlayStation 4,​ Xbox 360 y Xbox One.</p>
+                    <p class="card-text">Precio: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 3', 49.99)">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="carta card align-items-center" style="width: 20rem;">
+                <img src="imagen_juego4.jpg" class="card-img-top carta-imagen" alt="Juego 4">
+                <div class="card-body">
+                    <h5 class="card-title">Mortal Kombat XL: Standard Edition</h5>
+                    <p class="card-text">Mortal Kombat XL es una edición mejorada y revisada de Mortal Kombat X, 
+                        que incluirá el juego principal y los contenidos del Kombat Pack 1 y 2, además de futuros paquetes como Apocalypse, 
+                        y los skins de los packs de trajes y apariencias lanzados con anterioridad.</p>
+                    <p class="card-text">Precio: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 4', 49.99)">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="carta card align-items-center" style="width: 20rem;">
+                <img src="imagen_juego5.jpg" class="card-img-top carta-imagen" alt="Juego 5">
+                <div class="card-body">
+                    <h5 class="card-title">Mortal Kombat 1: Premium Edition</h5>
+                    <p class="card-text">Descripción del juego. Mortal Kombat 1 es un videojuego de lucha desarrollado por NetherRealm Studios y publicado por Warner Bros. Games. 
+                        Es la duodécima entrega principal de la serie Mortal Kombat y una secuela de Mortal Kombat 11. 
+                        Mortal Kombat 1 es el segundo reinicio suave de la serie, tras Mortal Kombat ​</p>
+                    <p class="card-text">Precio: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 5', 49.99)">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="carta card align-items-center" style="width: 20rem;">
+                <img src="imagen_juego6.jpg" class="card-img-top carta-imagen" alt="Juego 6">
+                <div class="card-body">
+                    <h5 class="card-title">Assassin's Creed: Valhalla</h5>
+                    <p class="card-text">Descripción del juego. Assassin's Creed Valhalla es un videojuego desarrollado por Ubisoft Montreal y publicado por Ubisoft. 
+                        Es el decimosegundo en importancia y el vigesimosegundo lanzado dentro de la saga de Assassin Creed, y sucesor al juego del 2018 Assassin's Creed Odyssey.</p>
+                    <p class="card-text">Precio: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Juego 6', 49.99)">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agregar más tarjetas de juegos aquí -->
+    </div>
+</div>
+
+<!-- Carrito de Compras -->
+<div class="container mt-5 carro" >
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito-lista">
+        <!-- Elementos seleccionados se agregarán aquí -->
+    </ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button class="btn btn-success" onclick="realizarCompra()">Comprar</button>
+</div>
+
+<!-- Incluir Bootstrap JS y scripts personalizados al final del cuerpo -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(nombre, precio) {
+        carrito.push({ nombre, precio });
+        total += precio;
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoLista = document.getElementById('carrito-lista');
+        const totalElemento = document.getElementById('total');
+        carritoLista.innerHTML = '';
+        carrito.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.nombre} - $${item.precio.toFixed(2)}`;
+            carritoLista.appendChild(li);
+        });
+        totalElemento.textContent = total.toFixed(2);
+    }
+
+    function realizarCompra() {
+        // Aquí puedes agregar la lógica para procesar la compra
+        alert('Compra realizada. Total: $' + total.toFixed(2));
+        carrito.length = 0; // Vaciar el carrito
+        total = 0;
+        actualizarCarrito();
+    }
+</script>
+
+<!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Contacto</h4>
+                <p>Correo electrónico: info@loustienda.com</p>
+                <p>Teléfono: +1234567890</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Ubicación</h4>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Código Postal: 12345</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

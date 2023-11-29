@@ -1,0 +1,54 @@
+/* Establece una imagen de fondo relacionada con Asia */
+body {
+    background-image: url('watercolor-chinese-style-illustration_23-2149711058.avif'); /* Cambia 'ruta-de-tu-imagen-asiatica.jpg' por la URL o la ruta de tu imagen de fondo asiática */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f7f7f7; /* Color de fondo de respaldo si la imagen no se carga */
+    color: #333; /* Color de texto principal */
+}
+
+/* Cambio de color de texto para mejorar la legibilidad */
+h1, h2, h3, p, .card-title, .card-text {
+    color: #000000; /* Color de texto principal en contraste con el fondo */
+}
+
+/* Cambia el color del botón para que se destaque */
+.btn-primary {
+    background-color: #bb1212; /* Color de fondo del botón */
+    border-color: #df1717; /* Color del borde del botón */
+}
+
+/* Cambia el color del enlace del menú de navegación */
+.navbar-nav .nav-link {
+    color: #fff; /* Color del enlace de navegación */
+}
+
+/* Cambia el color del enlace activo del menú de navegación */
+.navbar-nav .nav-item.active .nav-link {
+    color: #c51212; /* Color del enlace activo */
+}
+.item{
+    height: 800px;
+}
+.d-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+.color{
+    color: white;
+}
+.text{
+    text-align: center;
+}
+.carta{
+    text-align: center;
+    border-color: grey;
+}
+.carta-imagen{
+    height: 100%;
+    object-fit: cover;
+}
+
+

@@ -1,0 +1,29 @@
+.item{
+	height: 800px;
+}
+.d-img{
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.5);
+}
+.letra2{
+	color: white;
+}
+.carta{
+	height: 700px;
+	background-color: black;
+	text-align: center;
+	margin: 1em;
+	padding: 2em;
+	border-color: white;
+}
+.carta-imagen{
+	height: 100%;
+	object-fit: cover;
+}
+.carro{
+	text-align: center;
+	align-items: center;
+	padding: 1em;
+	margin: 2em;
+}
